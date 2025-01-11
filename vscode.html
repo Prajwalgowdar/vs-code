@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(203, 196, 196);
+        }
+
+        header {
+            background-color: #591d61;
+            padding: 10px 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 50px;
+            margin: 0;
+            font-family: 'Cursive', sans-serif;
+            color: gray;
+        }
+
+        .png {
+            width: 80px;
+            height: 80px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(19, 18, 18);
+            font-family: 'Cursive', sans-serif;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .button-container button {
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn {
+            background-color: blue;
+            color: white;
+        }
+
+        .copilot-btn {
+            background-color: white;
+            color: black;
+            border: 1px solid gray;
+        }
+
+        .toggle-btn {
+            background-color: rgb(217, 255, 127);
+        }
+
+        .text {
+            text-align: center;
+            font-size: 70px;
+            font-family: 'Cursive', sans-serif;
+            color: gray;
+            margin-top: 50px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            max-width: 800px;
+        }
+
+
+        .info-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+
+        .info-item {
+            width: 300px;
+            height: 300px;
+            background-color: darkgray;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            color: rgb(135, 21, 21);
+        }
+
+        .info-item p {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="img1.png" alt="VS Code Logo" class="png">
+            <h3 class="title" style="color: blue;">VS Code</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+            <input type="text" placeholder="Search Docs" style="width: 150px; height: 40px; font-size: 16px;">
+            <button class="download-btn">Download</button>
+            <button id="change" class="toggle-btn" onclick="btnclick()">LIGHT</button>
+        </div>
+    </header>
+
+    <p class="text" style="color: black;">Your code Editor.<br>Refined With AI</p>
+
+    <div class="button-container">
+        <button class="download-btn">Download for Windows</button>
+        <button class="copilot-btn">Get Copilot Free</button>
+    </div>
+
+
+    <div class="info-container">
+        <div class="info-item">
+            <h4 style="color: black;">Choose the model that works for you</h4>
+            <p>Pick the model that works best for your project and team, including GPT-4 and Claude Sonnet.</p>
+        </div>
+        <div class="info-item">
+            <h4 style="color: black;">An expert on your codebase</h4>
+            <p>Copilot locally indexes your codebase to understand what’s relevant and supplements that context to interactions with Copilot.</p>
+        </div>
+        <div class="info-item">
+            <h4 style="color: black;">Personalized to your needs</h4>
+            <p>Copilot works the way you do. Customize Copilot's prompts with details about your team's workflows, tools, and projects.</p>
+        </div>
+    </div>
+
+    <script>
+        function btnclick() {
+            const button = document.getElementById("change");
+            const body = document.body;
+
+            if (body.style.backgroundColor === "black") {
+                body.style.backgroundColor = "white";
+                button.textContent = "LIGHT";
+            } else {
+                body.style.backgroundColor = "black";
+                button.textContent = "DARK";
+            }
+        }
+    </script>
+</body>
+
+</html>
